@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Sphere</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('4.png'); /* Background image placeholder */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+        }
+
+        .navbar-left {
+            font-size: 1.2rem;
+            color: red;
+        }
+
+        .navbar-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navbar-center button, .navbar-center a {
+            padding: 10px 20px;
+            background-color: white;
+            border: none;
+            border-radius: 25px;
+            color: black;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .navbar-center a:hover {
+            background-color: gray;
+        }
+
+        .navbar-right {
+            position: relative;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .menu {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: white;
+            display: none;
+            flex-direction: column;
+            border-radius: 10px;
+            width: 150px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            padding: 10px;
+            color: black;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .menu a:last-child {
+            border-bottom: none;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+        }
+
+        .menu-active .menu {
+            display: flex;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .posts-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .post {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 10px;
+            width: 22%; /* 4 posts per row */
+            text-align: center;
+        }
+
+        .post img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .post .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .post .stats span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .post .profile {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .post .profile img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .post .profile .user-info {
+            text-align: left;
+        }
+
+        .post .profile .user-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <!-- Left -->
+        <div class="navbar-left">
+            Review<br>
+            Sphere
+        </div>
+
+        <!-- Center Menu -->
+        <div class="navbar-center">
+            <a href="RS Add.html">Add Review</a>
+            <a href="RS Review.html">MOVIE</a>
+            <a href="RS Music.html">MUSIC</a>
+            <a href="RS Art.html">ART</a>
+            <a href="RS News.html">NEWS</a>
+            <a href="RS.Sport.html">SPORT</a>
+        </div>
+
+        <!-- Right Menu (dropdown) -->
+        <div class="navbar-right">
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu">
+                <a href="RS Logout.html">Home</a>
+                <a href="RS Review.html">Review</a>
+                <a href="RS Contact.html">Contact us</a>
+                <a href="RS HELP.html">HELP</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="posts-container">
+            <!-- Post Example -->
+            <div class="post">
+                <img src="https://via.placeholder.com/150" alt="Review image">
+                <div class="stats">
+                    <span><img src="icon-view.png" alt="Views"> 5k</span>
+                    <span><img src="icon-comment.png" alt="Comments"> 30k</span>
+                    <span><img src="icon-like.png" alt="Likes"> 30k</span>
+                </div>
+                <div class="profile">
+                    <img src="https://via.placeholder.com/30" alt="User profile">
+                    <div class="user-info">
+                        <p>name type</p>
+                        <p>name user</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Duplicate this block for more posts -->
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-active');
+        }
+    </script>
+
+</body>
+</html>

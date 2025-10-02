@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Sphere - Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('4.png'); /* Background image placeholder */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .navbar-left {
+            font-size: 1.2rem;
+            color: red;
+        }
+
+        .navbar-right {
+            position: relative;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .menu {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: white;
+            display: none;
+            flex-direction: column;
+            border-radius: 10px;
+            width: 150px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            padding: 10px;
+            color: black;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .menu a:last-child {
+            border-bottom: none;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+        }
+
+        .menu-active .menu {
+            display: flex;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px);
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 40%;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .form-group p {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .submit-btn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <!-- Left -->
+        <div class="navbar-left">
+            Review<br>
+            Sphere
+        </div>
+
+        <!-- Right Menu (dropdown) -->
+        <div class="navbar-right">
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu">
+                <a href="RS Logout.html">Home</a>
+                <a href="RS Review.html">Review</a>
+                <a href="RS Contact.html">Contact us</a>
+                <a href="RS HELP.html">HELP</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="form-container">
+            <!-- Contact Details -->
+            <div class="form-group">
+                <label>Contact</label>
+                <p>Gmail: Reviewsphere@ssru.ac.th</p>
+                <p>Tel: 0840677308</p>
+                <p>Line ID: @reviewsphere</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-active');
+        }
+    </script>
+
+</body>
+</html>

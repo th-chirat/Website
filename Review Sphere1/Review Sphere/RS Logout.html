@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Sphere</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('4.png'); /* ใส่ URL รูปพื้นหลังของคุณตรงนี้ */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* ตั้งให้สูงเต็มหน้าจอ */
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* เพิ่มความทึบเพื่อให้เมนูดูชัดบนรูปพื้นหลัง */
+            position: relative;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .menu {
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            background-color: white;
+            display: none;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            padding: 10px;
+            color: black;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .menu a:last-child {
+            border-bottom: none;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+        }
+
+        .search-bar {
+            margin-left: 20px;
+            background-color: white;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+        }
+
+        .search-bar input {
+            border: none;
+            padding: 10px;
+            border-radius: 25px;
+            outline: none;
+        }
+
+        .logout {
+            margin-left: auto;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            height: calc(100vh - 80px); /* ทำให้ส่วนนี้สูงเต็มหน้าจอ แต่ลบพื้นที่ของ navbar */
+            padding-left: 20px;
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 7rem;
+            margin: 0;
+            color: red;
+        }
+
+        .content p {
+            font-size: 2rem;
+            color: white;
+            margin-top: -10px; /* เพิ่มระยะห่างด้านบน เพื่อให้คำว่า "REVIEW" ลงมาต่ำลง */
+        }
+
+        /* Menu Toggle */
+        .menu-active .menu {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <!-- Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        
+        <!-- Search Bar (next to menu icon) -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <!-- Logout Button (changed from Sign In to Logout) -->
+        <a href="RS Home.html" class="logout">Logout</a>
+    </div>
+
+    <!-- Menu Items -->
+    <div class="menu">
+        <a href="RS Logout.html">Home</a>
+        <a href="RS Review.html">Review</a>
+        <a href="RS Contact.html">Contact us</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>REVIEW</h1>
+        <h1>SPHERE</h1>
+        <p>NAVBAR</p>
+        <a href="RS Review.html"style="text-decoration:none"><p>Review</p></a> <!-- เพิ่มระยะห่างตรงนี้ -->
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

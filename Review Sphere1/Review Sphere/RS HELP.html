@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Sphere - Help</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('4.png'); /* Background image placeholder */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .navbar-left {
+            font-size: 1.2rem;
+            color: red;
+        }
+
+        .navbar-right {
+            position: relative;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .menu {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: white;
+            display: none;
+            flex-direction: column;
+            border-radius: 10px;
+            width: 150px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            padding: 10px;
+            color: black;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .menu a:last-child {
+            border-bottom: none;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+        }
+
+        .menu-active .menu {
+            display: flex;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px);
+            padding: 20px;
+        }
+
+        .help-container {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+        }
+
+        .help-section {
+            margin-bottom: 20px;
+        }
+
+        .help-section h2 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .help-section p {
+            color: white;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .faq-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .faq-container h3 {
+            font-size: 1.3rem;
+            color: white;
+        }
+
+        .faq-container p {
+            color: white;
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <!-- Left -->
+        <div class="navbar-left">
+            Review<br>
+            Sphere
+        </div>
+
+        <!-- Right Menu (dropdown) -->
+        <div class="navbar-right">
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu">
+                <a href="RS Logout.html">Home</a>
+                <a href="RS Review.html">Review</a>
+                <a href="RS Contact.html">Contact us</a>
+                <a href="RS HELP.html">HELP</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="help-container">
+            <!-- How to Use -->
+            <div class="help-section">
+                <h2>How to Use Review Sphere</h2>
+                <p>This section explains how you can use Review Sphere to add, view, and manage reviews on movies, music, and other topics. Follow the steps below:</p>
+                <p>1. To add a review, click on the 'Add Review' button at the top.</p>
+                <p>2. Fill out the form by adding a photo, a review name, and your detailed review, then click 'Submit'.</p>
+                <p>3. You can browse other reviews by selecting categories like Movies, Music, or Art from the top menu.</p>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-container">
+                <h3>Frequently Asked Questions (FAQ)</h3>
+                <p><strong>Q1: How do I edit my review?</strong><br>
+                A: You can edit your review by clicking on the edit icon next to your review on your profile page.</p>
+
+                <p><strong>Q2: How do I delete a review?</strong><br>
+                A: To delete a review, go to your profile and select the delete option for the review you want to remove.</p>
+
+                <p><strong>Q3: Can I contact support?</strong><br>
+                A: Yes, you can contact our support team by emailing Reviewsphere@ssru.ac.th or calling us at 0840677308.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-active');
+        }
+    </script>
+
+</body>
+</html>
